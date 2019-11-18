@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {   /*o que o usuário vai digitar, o que vai retornar*/
-    return view('welcome');
+    return view('welcome');   
 });
 
 
-Route::get('/home', function() {
-    echo "Hello Word!";
-});
+Route::get('/home', 'HomeController@viewHome');  /*acessar um método de uma classe sem criar um objeto*/
+ 
+Route::get('/cidade', 'CidadeController@viewCidade');
